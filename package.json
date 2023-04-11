@@ -1,0 +1,21 @@
+{
+  "name": "vms-autotest",
+  "version": "1.0.0",
+  "description": "VMS Autotest",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test"
+  },
+  "author": "Orynbay Miras",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.17.2",
+    "allure-playwright": "^2.0.0-beta.14",
+    "faker": "^6.6.6",
+    "playwright": "^1.17.2"
+  },
+  "dependencies": {
+    "Faker": "npm:faker@^6.6.6",
+    "package": "^1.0.1"
+  }
+}
