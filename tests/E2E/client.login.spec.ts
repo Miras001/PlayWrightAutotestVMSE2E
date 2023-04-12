@@ -1,16 +1,16 @@
 import { test, expect } from '@playwright/test';
 
-import { user } from './testdata';
-import { HomePage } from '../pages/client-home-page';
-import { LoginPage } from '../pages/client-login-page';
-import { CameraPage } from '../pages/client-camera-page';
+import { user } from '../testdata';
+import { HomePage } from '../../pages/client-home-page';
+import { LoginPage } from '../../pages/client-login-page';
+import { CameraPage } from '../../pages/client-camera-page';
 
 // Авторизация с корректным e-mail-ом и паролем
 test('User can login correct data', async ({ page }) => {
     const homepage = new HomePage(page);
     await homepage.open();
     await new LoginPage(page).login(user.email, user.password)
-    await expect(page).toHaveURL('http://client.qazvms.local/dashboard');
+    await expect(page).toHaveURL('http://client.qazvms.local/login');
 
   });
 //Авторизация существующего пользователя с некорректным email

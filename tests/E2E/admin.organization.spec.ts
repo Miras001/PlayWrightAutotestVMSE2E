@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
-import { orgparent, organization, user, object, camera } from './testdata';
-import { HomePage } from '../pages/admin-home-page';
-import { LoginPage } from '../pages/admin-login-page';
-import { OrganizationPage } from "../pages/admin-organization-page";
+import { orgparent, organization, user, object, camera } from '../testdata';
+import { HomePage } from '../../pages/admin-home-page';
+import { LoginPage } from '../../pages/admin-login-page';
+import { OrganizationPage } from "../../pages/admin-organization-page";
 
 //Проверить открытья окна создания головной организации
   test('Open create parent organization', async ({ page }) => {

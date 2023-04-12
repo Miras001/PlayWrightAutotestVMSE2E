@@ -1,12 +1,12 @@
 import { test, expect } from '@playwright/test';
 
-import { user } from './testdata';
-import { OrganizationClient } from './testdata';
-import { HomePage } from '../pages/client-home-page';
-import { LoginPage } from '../pages/client-login-page';
-import { ArchivePage } from '../pages/client-archive-page';
-import { CameraPage } from '../pages/client-camera-page';
-import { GISPage } from '../pages/client-gis-page';
+import { user } from '../../constants/userdata';
+import { OrganizationClient } from '../../constants/testdata';
+import { HomePage } from '../../pages/client-home-page';
+import { LoginPage } from '../../pages/client-login-page';
+import { ArchivePage } from '../../pages/client-archive-page';
+import { CameraPage } from '../../pages/client-camera-page';
+import { GISPage } from '../../pages/client-gis-page';
 
 
 //  test.beforeAll(async ({ page }) => {
@@ -15,7 +15,7 @@ import { GISPage } from '../pages/client-gis-page';
 //    await new LoginPage(page).login(user.email, user.password)
 //  });
 
-  test.only('Check expand tree', async ({ page }) => {
+  test('Check expand tree', async ({ page }) => {
     const homepage = new HomePage(page);
     const locator = page.locator('.MuiTreeView-root'); 
     await homepage.open();

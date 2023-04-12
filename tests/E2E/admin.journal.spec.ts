@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
-import { orgparent, organization, user, object, camera, rules } from './testdata';
-import { HomePage } from '../pages/admin-home-page';
-import { LoginPage } from '../pages/admin-login-page';
-import { JournalPage } from "../pages/admin-journal-page";
+import { orgparent, organization, user, object, camera, rules } from '../testdata';
+import { HomePage } from '../../pages/admin-home-page';
+import { LoginPage } from '../../pages/admin-login-page';
+import { JournalPage } from "../../pages/admin-journal-page";
 
 
 //Проверить переход в журнал

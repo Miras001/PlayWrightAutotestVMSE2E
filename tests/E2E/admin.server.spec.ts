@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
-import { organization, user, object, camera } from './testdata';
-import { HomePage } from '../pages/admin-home-page';
-import { LoginPage } from '../pages/admin-login-page';
-import { ServerPage } from "../pages/admin-server-page";
+import { organization, user, object, camera } from '../testdata';
+import { HomePage } from '../../pages/admin-home-page';
+import { LoginPage } from '../../pages/admin-login-page';
+import { ServerPage } from "../../pages/admin-server-page";
 
 
 //Проверить открытья раздела серверы

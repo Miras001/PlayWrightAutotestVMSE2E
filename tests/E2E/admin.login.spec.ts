@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
-import { user } from './testdata';
-import { HomePage } from '../pages/admin-home-page';
-import { LoginPage } from '../pages/admin-login-page';
+import { user } from '../testdata';
+import { HomePage } from '../../pages/admin-home-page';
+import { LoginPage } from '../../pages/admin-login-page';
 
 //Авторизация с корректным e-mail-ом и паролем
 test('User can login correct data', async ({ page }) => {

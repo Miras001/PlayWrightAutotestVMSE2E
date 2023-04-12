@@ -1,10 +1,10 @@
 import { test, expect } from '@playwright/test';
 
-import { user } from './testdata';
-import { HomePage } from '../pages/client-home-page';
-import { LoginPage } from '../pages/client-login-page';
-import { ProfilePage } from '../pages/client-profile-page';
-import { CameraPage } from '../pages/client-camera-page';
+import { user } from '../testdata';
+import { HomePage } from '../../pages/client-home-page';
+import { LoginPage } from '../../pages/client-login-page';
+import { ProfilePage } from '../../pages/client-profile-page';
+import { CameraPage } from '../../pages/client-camera-page';
 
 test('Check User Profile', async ({ page }) => {
     const homepage = new HomePage(page);

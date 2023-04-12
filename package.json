@@ -9,10 +9,10 @@
   "author": "Orynbay Miras",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.17.2",
-    "allure-playwright": "^2.0.0-beta.14",
-    "faker": "^6.6.6",
-    "playwright": "^1.17.2"
+    "@playwright/test": "^1.32.3",
+    "allure-playwright": "^2.1.0",
+    "faker": "^5.5.3",
+    "playwright": "^1.32.3"
   },
   "dependencies": {
     "Faker": "npm:faker@^6.6.6",

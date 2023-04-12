@@ -9,7 +9,7 @@ export class HomePage {
     }
 
     async open() {
-        await this.page.goto('http://client.qazvms.local/dashboard');
+        await this.page.goto('http://client.qazvms.local/login');
     }
 
     async openArchive() {
