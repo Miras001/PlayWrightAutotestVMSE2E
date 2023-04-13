@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
-import { organization, user, object, camera } from '../testdata';
+import { user} from '../../constants/userdata';
+import { organization, object, camera } from '../../constants/testdata';
 import { HomePage } from '../../pages/admin-home-page';
 import { LoginPage } from '../../pages/admin-login-page';
 import { ServerPage } from "../../pages/admin-server-page";

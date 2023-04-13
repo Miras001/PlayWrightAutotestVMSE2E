@@ -45,3 +45,4 @@ yarn.lock
 
 /playwright-report
 
+playwright-report/index.html

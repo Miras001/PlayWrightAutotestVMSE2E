@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 
-import { user } from '../testdata';
+import { user } from '../../constants/userdata';
 import { HomePage } from '../../pages/client-home-page';
 import { LoginPage } from '../../pages/client-login-page';
 import { CameraPage } from '../../pages/client-camera-page';
