@@ -1,0 +1,13 @@
+stages:
+  - test
+
+test:
+  image: node:16
+  parallel: 10
+  script:
+    - npm install
+    - npm ci
+    - npm run test
+    - npm i -D @playwright/test allure-playwright
+
+  
