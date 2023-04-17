@@ -1,6 +1,7 @@
 export const user = {
     email: 'm.orynbay@srgdev.kz',
     password: 'Qwerty123!!',
+    passwordtest:'Qwerty123!!!',
     incorrectemail: 'm.orynbay@srgdev.kz1',
     incorrectpassword: 'errorpassword',
     testemail: 'xwkogypfnfztqalfyz@bvhrk.com',

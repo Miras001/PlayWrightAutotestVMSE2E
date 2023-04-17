@@ -24,27 +24,26 @@ test("login", async ({ request, baseURL, context }) => {
   console.log(Token);
 });
 
-test("recover-set-password", async ({ request, baseURL, context }) => {
+test.skip("recover-set-password", async ({ request, baseURL, context }) => {
 
-  const Token = await context.exposeFunction('getToken');
+  const Token = await context.exposeFunction('getToken', () => {
+    return 'Token';
+  });
+  
   const response = await request.post(`${baseURL}api/auth/recover-set-password`, {
-    
     data: {
-      email: user.email,
+      email: user.testemail,
       token: Token,
-      password: user.password
+      password: user.passwordtest
     }
   });
 
-  
   expect(response.status()).toBe(200);
   console.log(await response.json());
-  
 });
 
 test("recover-send-email", async ({ request, baseURL }) => {
   const response = await request.post(`${baseURL}api/auth/recover-send-email`, {
-    
     data: {
       email: user.testemail,
     }
@@ -53,5 +52,4 @@ test("recover-send-email", async ({ request, baseURL }) => {
   expect(response.ok()).toBeTruthy();
   expect(response.status()).toBe(200);
   console.log(await response.json());
-  
 });

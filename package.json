@@ -18,6 +18,8 @@
     "Faker": "npm:faker@^6.6.6",
     "fetch": "^1.1.0",
     "ftch": "^0.1.4",
-    "package": "^1.0.1"
+    "package": "^1.0.1",
+    "postgre": "^0.1.8",
+    "redis": "^4.6.5"
   }
 }
