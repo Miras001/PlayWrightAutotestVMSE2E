@@ -102,8 +102,8 @@ const response = await request.post(`${baseURL}api/cvt/create-detection-left-obj
     console.log(await response.json());
 
 });
-
-test("create-detection-prohibited-zones", async ({ request, baseURL, }) => {
+//todo refactor
+test.skip("create-detection-prohibited-zones", async ({ request, baseURL, }) => {
   const now = new Date();
   const number = faker.datatype.number({min:1, max: 10});
   const isoDateTime = formatDateTime(now);

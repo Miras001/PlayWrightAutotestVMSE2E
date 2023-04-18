@@ -18,6 +18,7 @@ export const organization = {
 export const object = {
     title:'Тест3',
     noValuetitle:'',
+    id:1,
 }
 export const camera = {
     title:'Тест4',
@@ -30,6 +31,7 @@ export const camera = {
     nopassword:'',
     noip:'',
     noport:'',
+    id: 17,
 
 }  
 export const rules = {

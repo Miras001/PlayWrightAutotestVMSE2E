@@ -1,4 +1,3 @@
-import { PostgreSQLChecker } from 'postgre';
 import { user } from '../constants/userdata';
 
 const baseURL: string = 'http://admin.qazvms.local/';

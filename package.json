@@ -15,10 +15,12 @@
     "playwright": "^1.32.3"
   },
   "dependencies": {
+    "devices": "^0.1.0",
     "Faker": "npm:faker@^6.6.6",
     "fetch": "^1.1.0",
     "ftch": "^0.1.4",
     "package": "^1.0.1",
+    "pg": "^8.10.0",
     "postgre": "^0.1.8",
     "redis": "^4.6.5"
   }

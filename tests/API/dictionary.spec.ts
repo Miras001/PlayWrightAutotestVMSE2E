@@ -1,5 +1,5 @@
 import { user } from '../../constants/userdata';
-import { test } from '@playwright/test';
+import { expect, test } from '@playwright/test';
 import { login } from './.././../helpers/login';
 
 const baseURL: string = 'http://admin.qazvms.local/';
@@ -17,24 +17,28 @@ test.beforeEach(async ({ page }): Promise<void> => {
   };
 });
 
-test("check detectionObjectType", async ({ page }): Promise<void> => {
+test("check detectionObjectType", async ({ request, baseURL, }) => {
   const token: string = await getTokenFunc();
 
-  await page.setExtraHTTPHeaders({
-    'Authorization': `Bearer ${token}`
-  });
+  const response = await request.post(`${baseURL}api/dictionary/detectionObjectType`, {
+      headers: {
+        Authorization: `Bearer ${token}`
+      
+      }});
 
-  const response = await page.goto(`${baseURL}api/dictionary/detectionObjectType`, {
-    headers: {
-      'Authorization': `Bearer ${token}`
-    }
-  });
-
-  if (response) {
-    expect(response).toBeTruthy();
     expect(response.status()).toBe(200);
-  } else {
-    // Обработка ошибки, если ответ от сервера не был получен
-    console.error("No response from server");
-  }
+    console.log(await response.json());
+});
+
+test("check detectionType", async ({ request, baseURL, }) => {
+  const token: string = await getTokenFunc();
+
+  const response = await request.post(`${baseURL}api/dictionary/detectionType`, {
+      headers: {
+        Authorization: `Bearer ${token}`
+      
+      }});
+
+    expect(response.status()).toBe(200);
+    console.log(await response.json());
 });
