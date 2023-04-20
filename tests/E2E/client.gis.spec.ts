@@ -7,20 +7,56 @@ import { LoginPage } from '../../pages/client-login-page';
 import { ArchivePage } from '../../pages/client-archive-page';
 import { CameraPage } from '../../pages/client-camera-page';
 import { GISPage } from '../../pages/client-gis-page';
+import { chromium } from 'playwright';
 
+/*
+test.beforeEach(async ({ page }): Promise<void> => {
+  
+  (async () => {
+    const browser = await chromium.launch();
+    const context = await browser.newContext();
+  
+    // Добавляем данные в local storage
+    await context.addInitScript(() => {
+      localStorage.setItem('i18nextLng', 'ru');
+    });
+  
+    // Получаем данные из local storage
+    const value = await page.evaluate(() => {
+      return localStorage.getItem('key');
+    });
+  
+    console.log(value); // Выведет "value"
+  
+    await browser.close();
+  })()});
 
-//  test.beforeAll(async ({ page }) => {
-//    const homepage = new HomePage(page);
-//     await homepage.open();
-//    await new LoginPage(page).login(user.email, user.password)
-//  });
-
+*/
   test('Check expand tree', async ({ page }) => {
     const homepage = new HomePage(page);
     const locator = page.locator('.MuiTreeView-root'); 
     await homepage.open();
+    
     await new LoginPage(page).login(user.email, user.password)
     await homepage.gotoGIS();
+    (async () => {
+      const browser = await chromium.launch();
+      const context = await browser.newContext();
+    
+      // Добавляем данные в local storage
+      await context.addInitScript(() => {
+        localStorage.setItem('i18nextLng', 'ru');
+      });
+    
+      // Получаем данные из local storage
+      const value = await page.evaluate(() => {
+        return localStorage.getItem('i18nextLng');
+      });
+    
+      console.log(value); // Выведет "value"
+    
+      await browser.close();
+    })()
     await new GISPage(page).openCameraTree();
     await new GISPage(page).searchInputFieldOrgName(OrganizationClient.titleObj);
 
